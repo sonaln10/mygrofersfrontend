@@ -1,0 +1,6 @@
+<app-navbar [cartValue]="this.count"></app-navbar>
+<div class="jumbotron">
+<h1 align="center">
+Welcome {{n}}
+</h1>
+    <app-product (emitter)='showCounter($event)'></app-product>

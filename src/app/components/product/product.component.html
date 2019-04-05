@@ -1,0 +1,59 @@
+<ul class="list-unstyled">
+  <li class="card card-body mb-2">
+    <div class="row">
+      <div class="col-sm-4">
+        Insert pic
+        <input type="file" [(ngModel)]="itemModel.product.photo" required>
+      </div>
+      <div class="col-sm-8">
+        <h3>Product Name:</h3>
+        <input type="text" [(ngModel)]="itemModel.product.productName"  required>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <h6>Company Name:</h6>
+            <input type="text" [(ngModel)]="itemModel.product.companyName" required>
+          </li>
+          <li class="list-group-item">
+            <h6>Price:</h6>
+            <input type="text" [(ngModel)]="itemModel.product.price"  required>
+          </li>
+        </ul>
+        <div>
+          <button class="btn btn-primary" (click)="addItem()" type="submit" [disabled]="!itemModel.product.productName && !itemModel.product.companyName && !itemModel.product.price" >Add Item</button>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+<ul class="list-unstyled">
+  <li class="card card-body mb-2" *ngFor="let item of items">
+    <div class="row">
+      <div class="col-sm-4">
+        <img class="img-fluid" [src]="item.product.photo" alt="">
+        {{item.product.id}}
+      </div>
+      <div class="col-sm-8">
+        <h3>{{item.product.productName}}</h3>
+        <ul class="list-group">
+          <li class="list-group-item">Company:<h6> {{item.product.companyName}}</h6>
+          </li>
+          <li class="list-group-item">Price: <h6>{{item.product.price}}</h6>
+          </li>
+        </ul>
+        <div class="btn-group" role="group">
+          <button (click)="onSub(item.product.id)" class="btn btn-primary"
+            [disabled]="count==0 || item.quantity==0">-</button>
+          <button class="btn btn-primary"> {{item.quantity}} </button>
+          <button (click)="onAdd(item.product.id)" class="btn btn-primary">+</button>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+
+<div>
+  <button (click)="myOutputMethod()">
+    Click Me
+
+  </button> 
+</div>

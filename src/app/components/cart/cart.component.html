@@ -1,0 +1,48 @@
+<!-- 
+<ul class="list-unstyled">
+  <li class="card card-body mb-2" *ngFor="let item of cart ">
+    <div class="row">
+      <div class="col-sm-4">
+        <img class="img-fluid" [src]="item.product.photo" alt="">
+        {{item.product.id}}
+      </div>
+      <div class="col-sm-8">
+        <h3>{{item.product.productName}}</h3>
+        <ul class="list-group">
+          <li class="list-group-item">Company:<h6> {{item.product.companyName}}</h6>
+          </li>
+          <li class="list-group-item">Price: <h6>{{item.product.price}}</h6>
+          </li>
+        </ul>
+        <div class="btn-group" role="group">
+          <button (click)="onSub(item.product.id)" class="btn btn-primary"
+            [disabled]="count==0 || item.quantity==0">-</button>
+          <button class="btn btn-primary"> {{item.quantity}} </button>
+          <button (click)="onAdd(item.product.id)" class="btn btn-primary">+</button>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul> -->
+<table class="table table-striped table-dark">
+  <tr *ngFor="let item of cart">
+    <td>
+      <img class="img-fluid" [src]="item.product.photo" alt="">
+      </td>
+      <td>
+      {{item.product.productName}}
+      <br />
+      {{item.product.companyName}}
+      <br />
+        {{item.product.price}}
+  </td>
+    <td>
+      <div class="btn-group" role="group">
+        <button (click)="onSub(item.product.id)" class="btn btn-primary"
+          [disabled]="count==0 || item.quantity==0">-</button>
+        <button class="btn btn-primary"> {{item.quantity}} </button>
+        <button (click)="onAdd(item.product.id)" class="btn btn-primary">+</button>
+      </div>
+      </td>
+      </tr>
+</table>

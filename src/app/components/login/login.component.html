@@ -1,0 +1,29 @@
+<div class="jumbotron">
+  <div class="row row-centered">
+    <div class="container">
+      <form #frm="ngForm">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" [(ngModel)]="name" required ngModel>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+          required ngModel>
+          <h4>Role</h4>
+          <select>
+              <option *ngFor="let role of roles" [value]="role.value">
+                {{role.viewValue}}
+              </option>
+            </select>
+        <button class="btn btn-success" (click)="myOutputMethod()" type="submit"
+          [disabled]="frm.pristine || frm.invalid" routerLink="/home">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+        <div style="background-color:#f1f1f1">
+          <button type="button" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
