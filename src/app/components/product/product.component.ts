@@ -1,7 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Item } from 'src/app/entities/item';
-import { DataService } from 'src/app/services/data.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -9,21 +7,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  items: any = [];
-  count: any =0;
-  prodName: string;
-  compName: string;
-  price: number;
-  item: Item;
+  items: Item[] = [];
+  count: number =0;
   id: number =2;
   @Output() emitter = new EventEmitter();
+  @Output() cartItemsEmitter=new EventEmitter();
   itemModel:any;
   cartItems: Item[]=[];
-  route;
+  //index:number;
 
 
-  constructor(private dataService:DataService, private  router:Router) {
-this.route=this.router;
+  constructor() {
     this.itemModel={
     "product":
     {  
@@ -35,7 +29,7 @@ this.route=this.router;
       },
       "quantity": ""
     }    
-   }
+    }
   ngOnInit() {
     this.items =
       [
@@ -82,25 +76,33 @@ this.route=this.router;
   }
   onAdd(productId){
       this.items[productId].quantity++;
-      console.log(productId)
+      console.log(productId);
+      this.cartItems.push(this.items[productId]);
       this.count++;
       this.emitter.emit(this.count);
+      this.cartItemsEmitter.emit(this.cartItems);
   }
 
   onSub(productId){
     this.items[productId].quantity--;
-    console.log(productId);
+    console.log(productId);    
     this.count--;
     this.emitter.emit(this.count);
+  //   if(this.items[productId].quantity===0)
+  //   {
+  //   let index=this.cartItems.indexOf(this.items[productId]);
+  //     this.cartItems.splice(index);
+  // }
+    // console.log("index: "+this.index);
+    //  if(this.items[productId].quantity===0)
+    //  this.cartItems.splice(this.index);
+  //   //this.items[productId].quantity;
+  //   function isBigEnough(element, index, array) { 
+  //     return ( element>0); 
+  //  } 
+  //  if(this.items.every(isBigEnough))
+  //  this.cartItems.push(this.items[productId]);
+  //  console.log("this.items.every(isBigEnough): "+this.items.every(isBigEnough)+"this.cartItems: "+this.cartItems);
+    this.cartItemsEmitter.emit(this.cartItems);
   }
-
-    myCart(){
-      this.emitter.emit(this.items);
-    }
-    myOutputMethod(){
-      console.log("inside product component.ts: "+this.items);
-      this.items=this.items.filter(i=>i.quantity!==0)
-      this.dataService.setData(this.items);
-      this.route.navigate(['CartComponent', {cart: this.items}]);
-     }
 }

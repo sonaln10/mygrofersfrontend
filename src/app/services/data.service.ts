@@ -16,4 +16,12 @@ export class DataService {
   {
     return this.name;
   }
+
+  isLoggedIn(password:any):boolean{
+     console.log("inside isLoggedIn()");
+    if(password==="Aditya@14")
+    return true;
+    else 
+    return false;
+  }
 }

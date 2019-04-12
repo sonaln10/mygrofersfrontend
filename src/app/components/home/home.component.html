@@ -1,6 +1,6 @@
-<app-navbar [cartValue]="this.count"></app-navbar>
+<app-navbar [cartValue]="this.count" [itemsInCart]="this.cartItems"></app-navbar>
 <div class="jumbotron">
 <h1 align="center">
 Welcome {{n}}
 </h1>
-    <app-product (emitter)='showCounter($event)'></app-product>
+    <app-product (emitter)='showCounter($event)' (cartItemsEmitter)='showCartItems($event)'></app-product>

@@ -11,7 +11,7 @@ import { DataService } from "src/app/services/data.service";
 
 export class LoginComponent implements OnInit {
 name:string;
-psw:string;
+password:string;
 roles: Role[]=[
   {value: 0, viewValue: 'Owner'},
   {value: 1, viewValue: 'Customer'}
@@ -20,8 +20,11 @@ roles: Role[]=[
 
   ngOnInit() { 
   }
+
+ 
   myOutputMethod(){
      this.dataService.setData(this.name);
+     this.dataService.setData(this.password);
     }
 }
 export interface Role {
