@@ -9,7 +9,6 @@ import { Item } from 'src/app/entities/item';
 export class ProductComponent implements OnInit {
   items: Item[] = [];
   count: number =0;
-  id: number =2;
   @Output() emitter = new EventEmitter();
   @Output() cartItemsEmitter=new EventEmitter();
   itemModel:any;
@@ -17,19 +16,7 @@ export class ProductComponent implements OnInit {
   //index:number;
 
 
-  constructor() {
-    this.itemModel={
-    "product":
-    {  
-        "id": this.id,
-        "productName": "",
-        "companyName": "",
-        "price": "",
-        "photo": ""
-      },
-      "quantity": ""
-    }    
-    }
+  constructor() {}
   ngOnInit() {
     this.items =
       [

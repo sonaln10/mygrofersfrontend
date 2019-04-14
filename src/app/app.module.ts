@@ -13,6 +13,8 @@ import { ParentComponent } from "./components/parent/parent.component";
 import { ChildComponent } from "./components/child/child.component";
 import { ProductComponent } from "./components/product/product.component";
 import { CartComponent } from './components/cart/cart.component';
+import { ManageProductComponent } from './components/manage-product/manage-product.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,9 @@ import { CartComponent } from './components/cart/cart.component';
     ProductComponent,
     SampleComponent,
     HelloComponent,
-    CartComponent
+    CartComponent,
+    ManageProductComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

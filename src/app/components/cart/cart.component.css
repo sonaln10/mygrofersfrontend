@@ -1,3 +1,32 @@
-.table-bordered{
-    width: 50%;
+.pos{
+    position: relative;
+}
+.container {
+    max-width: 400px;
+    width: 200%;
+    margin: 0 auto;
+    position: relative;
+    background: lightgrey;
+  }
+
+  .col-sm-4{
+    background:white;
+    padding: 5px;
+    margin: 10px 0;
+   
+  }
+
+  .col-sm-8{
+    background: white;
+    padding: 5px;
+    margin: 10px 0;
+  }
+
+.card{
+    /* background: greenyellow; */
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.list-group{
+    background: blue;   
 }

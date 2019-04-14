@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
-import { DataService } from "src/app/services/data.service";
 import { Item } from 'src/app/entities/item';
+import { UserService } from 'src/app/services/user.service';
 
 
 @Component({
@@ -13,11 +13,11 @@ n: string;
 count:number;
 cartItems:Item[]=[];
 
-constructor(private dataservice:DataService) {}
+constructor(private userService:UserService) {}
 
   ngOnInit() {
     console.log("home ngoninit");
- this.n=this.dataservice.getData();
+ this.n=this.userService.getData();
 }
 
 showCounter(count) {

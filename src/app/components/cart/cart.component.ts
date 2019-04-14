@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { DataService } from 'src/app/services/data.service';
-import { Item } from 'src/app/entities/item';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-cart',
@@ -12,10 +11,10 @@ export class CartComponent implements OnInit {
   filteredCart:any;
   items: any = [];
 
-  constructor(private dataservice: DataService) { }
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
-    this.cart = this.dataservice.getData();
+    this.cart = this.userService.getData();
     this.cart = this.cart.filter(function (elem, index, self) {
       return index === self.indexOf(elem);
     })

@@ -7,18 +7,18 @@ export class DataService {
 
   constructor() { }
 
-  name:any;
+   data:any;
 
-  setData(name){
-    this.name=name;
-  }
+   setData(data){
+     this.data=data;
+   }
   getData()
   {
-    return this.name;
+    return this.data;
   }
 
   isLoggedIn(password:any):boolean{
-     console.log("inside isLoggedIn()");
+     console.log("inside isLoggedIn(): "+password);
     if(password==="Aditya@14")
     return true;
     else 

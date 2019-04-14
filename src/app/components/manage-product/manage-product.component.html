@@ -1,0 +1,52 @@
+<!-- <ul class="list-unstyled">
+  <li class="card card-body mb-2">
+    <div class="row">
+      <div class="col-sm-4">
+        Insert pic
+        <input type="file" [(ngModel)]="itemModel.product.photo" required>
+      </div>
+      <div class="col-sm-8">
+        <h3>Product Name:</h3>
+        <input type="text" [(ngModel)]="itemModel.product.productName"  required>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <h6>Company Name:</h6>
+            <input type="text" [(ngModel)]="itemModel.product.companyName" required>
+          </li>
+          <li class="list-group-item">
+            <h6>Price:</h6>
+            <input type="text" [(ngModel)]="itemModel.product.price"  required>
+          </li>
+        </ul>
+        <div>
+          <button class="btn btn-primary" (click)="addItem()" type="submit" [disabled]="!itemModel.product.productName && !itemModel.product.companyName && !itemModel.product.price" >Add Item</button>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul> -->
+
+<app-navbar></app-navbar>
+<div class="container">  
+  <form id="manage" action="" method="post">
+    <h3>Manage Products</h3>
+    <fieldset>
+      <input placeholder="Product name" [(ngModel)]="itemModel.product.productName" type="text" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Company name" [(ngModel)]="itemModel.product.companyName" type="text" tabindex="2" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Price" [(ngModel)]="itemModel.product.price" type="text" tabindex="3" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Price" [(ngModel)]="itemModel.product.price" type="file" tabindex="4" required>
+    </fieldset>
+    <fieldset>
+      <button name="add" type="submit" data-submit="...Sending" tabindex="5"  (click)="addItem()" [disabled]="!itemModel.product.productName && !itemModel.product.companyName && !itemModel.product.price">Add Product</button>
+    </fieldset>
+    <fieldset>
+      <button name="delete" tabindex="6" type="sub">Delete Product</button>
+    </fieldset>
+  </form>
+</div>

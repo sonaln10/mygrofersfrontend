@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { DataService } from "src/app/services/data.service";
+import { UserService } from 'src/app/services/user.service';
 
 
 @Component({
@@ -16,14 +17,14 @@ roles: Role[]=[
   {value: 0, viewValue: 'Owner'},
   {value: 1, viewValue: 'Customer'}
 ];
-  constructor(private dataService:DataService) { }
+  constructor(private userService:UserService,private dataService:DataService) { }
 
   ngOnInit() { 
   }
 
  
   myOutputMethod(){
-     this.dataService.setData(this.name);
+     this.userService.setData(this.name);
      this.dataService.setData(this.password);
     }
 }

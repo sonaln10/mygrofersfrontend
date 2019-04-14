@@ -5,13 +5,14 @@ import { DataService } from '../services/data.service';
 @Injectable()
 export class AlwaysAuthGuard implements CanActivate{
 password;
+
     constructor(private dataService:DataService,private router:Router){
         this.password=this.dataService.getData();
     }
 
     canActivate() {
         
-        //console.log("OnlyLoggedInUsers",this.password);
+        console.log("inside canActivate ",this.password);
         if (this.dataService.isLoggedIn(this.password)) {
           return true;
         } else {

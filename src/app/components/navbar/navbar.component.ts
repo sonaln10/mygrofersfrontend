@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, OnChanges} from '@angular/core';
-import { DataService } from 'src/app/services/data.service';
+import { UserService } from 'src/app/services/user.service';
 
 
 @Component({
@@ -12,12 +12,12 @@ export class NavbarComponent implements OnChanges {
 @Input() cartValue:number;
 @Input() itemsInCart: any;
 
-constructor(private dataService: DataService)
+constructor(private userService: UserService)
 {
   console.log("inside navbar constructor");
 }
 myOutputMethod(){
-this.dataService.setData(this.itemsInCart);
+this.userService.setData(this.itemsInCart);
 }
 ngOnChanges(){
   this.myOutputMethod();
