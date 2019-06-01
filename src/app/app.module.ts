@@ -15,6 +15,9 @@ import { ProductComponent } from "./components/product/product.component";
 import { CartComponent } from './components/cart/cart.component';
 import { ManageProductComponent } from './components/manage-product/manage-product.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+//import {TabsModule} from 'ngx-tabset';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,12 +31,13 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     HelloComponent,
     CartComponent,
     ManageProductComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    FormsModule
     // MatSelectModule,
     // MatInputModule,
     // MatFormFieldModule
