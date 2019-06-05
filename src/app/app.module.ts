@@ -16,6 +16,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { ManageProductComponent } from './components/manage-product/manage-product.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { FooterComponent } from './footer/footer.component';
 //import {TabsModule} from 'ngx-tabset';
 
 @NgModule({
@@ -32,7 +33,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     CartComponent,
     ManageProductComponent,
     CheckoutComponent,
-    DashboardComponent
+    DashboardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
