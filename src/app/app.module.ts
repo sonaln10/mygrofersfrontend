@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule} from '@angular/forms';
-//import { MatFormFieldModule, MatInputModule, MatSelectModule } from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SampleComponent } from './sample/sample.component';
@@ -17,7 +16,6 @@ import { ManageProductComponent } from './components/manage-product/manage-produ
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FooterComponent } from './footer/footer.component';
-//import {TabsModule} from 'ngx-tabset';
 
 @NgModule({
   declarations: [
@@ -40,9 +38,6 @@ import { FooterComponent } from './footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule
-    // MatSelectModule,
-    // MatInputModule,
-    // MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
