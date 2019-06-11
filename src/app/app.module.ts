@@ -16,6 +16,10 @@ import { ManageProductComponent } from './components/manage-product/manage-produ
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FooterComponent } from './footer/footer.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -37,7 +41,11 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatTabsModule,
+    MatExpansionModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

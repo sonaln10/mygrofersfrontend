@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,11 +9,12 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class DashboardComponent implements OnInit {
 n:String;
+panelOpenState = false;
+constructor(private userService:UserService) { }
+  
 
-  constructor(private userService:UserService) { }
-
-  ngOnInit() {
-    console.log("dashboard ngoninit");
- this.n=this.userService.getData();
+ngOnInit() {
+  console.log("dashboard ngoninit");
+this.n=this.userService.getData();
 }
 }

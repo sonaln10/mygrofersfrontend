@@ -1,41 +1,43 @@
-
-
-<nav class="navbar navbar-expand-md navbar-dark bg-secondary">
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<hr />
+<nav class="navbar-expand-md">
+  <div class="container">
+    <div class="row">
+      <div class= "col-lg-9">
+      <mat-tab-group mat-align-tabs="center">
+        <!-- animationDuration="0ms" -->
+      <mat-tab label="Dashboard"></mat-tab>
+      <mat-tab label="Home"></mat-tab>
+      <mat-tab label="Manage Products"></mat-tab>    
+      </mat-tab-group>
+    </div>
+    <div class="col-lg-1">
+        <span><i class="fa fa-search" aria-hidden="true"></i></span>  
+        </div>
+        <div class="col-lg-1">
+          <a href="#" style="color:rgb(252, 126, 147)"> SIGN IN</a>
+        </div>
+  <div class="col-lg-1">
+  <span><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></span>  
+  </div>
+  </div>
+  </div>
+<!-- </nav> -->
+<!-- <nav class="navbar navbar-expand-md sticky-top mt-5"> -->
+  <hr />
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+              <p class="indent">CALL US: 9860901843 </p>
+            </li>
+        <li class="nav-item">
+          <p class="indent">FREE SHIPPING AND RETURNS </p>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/manageProducts">Manage Products</a>
+          <p class="indent">IND/INR</p>
         </li>
       </ul>
-        <!-- <li class="nav-item">
-          <a class="nav-link disabled" href="disabled">Disabled</a>
-        </li>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-           <div class="dropdown-menu" aria-labelledby="dropdown01">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-      </ul> -->
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
     </div>
-    <button (click)="myOutputMethod()" routerLink="/mycart">
-    <img class="logo" src="/assets/images/cart.png" alt="cart" >
-    <span class="badge badge-success">{{cartValue}}</span>
-  </button>
   </nav>
 
   
