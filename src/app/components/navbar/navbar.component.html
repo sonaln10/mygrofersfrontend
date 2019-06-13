@@ -1,30 +1,30 @@
-<hr />
-<nav class="navbar-expand-md">
-  <div class="container">
+<br />
+<div class="container">
     <div class="row">
-      <div class= "col-lg-9">
-      <mat-tab-group mat-align-tabs="center">
-        <!-- animationDuration="0ms" -->
-      <mat-tab label="Dashboard"></mat-tab>
-      <mat-tab label="Home"></mat-tab>
-      <mat-tab label="Manage Products"></mat-tab>    
-      </mat-tab-group>
+        <div class= "col-lg-9" >
+            <mat-toolbar>
+                <nav mat-tab-nav-bar mat-align-tabs="center" aria-label="weather navigation links" [backgroundColor]="tabNavBackground">
+                   <a mat-tab-link routerLink="/dashboard">Dashboard</a>
+                   <a mat-tab-link routerLink="/home">Home</a>
+                   <a mat-tab-link routerLink="/manageProducts">Manage Products</a>
+                </nav>
+               </mat-toolbar>
     </div>
-    <div class="col-lg-1">
+  
+    <div class="col-md-1">
         <span><i class="fa fa-search" aria-hidden="true"></i></span>  
         </div>
         <div class="col-lg-1">
           <a href="#" style="color:rgb(252, 126, 147)"> SIGN IN</a>
         </div>
-  <div class="col-lg-1">
+  <div class="col-sm-1">
   <span><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></span>  
-  </div>
-  </div>
-  </div>
-<!-- </nav> -->
-<!-- <nav class="navbar navbar-expand-md sticky-top mt-5"> -->
-  <hr />
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+</div>
+
+</div>
+</div>
+ <br />
+ <nav class="navbar navbar-expand-md bg-dark">
       <ul class="navbar-nav mr-auto">
           <li class="nav-item">
               <p class="indent">CALL US: 9860901843 </p>
@@ -35,9 +35,5 @@
         <li class="nav-item">
           <p class="indent">IND/INR</p>
         </li>
-      </ul>
-
-    </div>
+      </ul> 
   </nav>
-
-  

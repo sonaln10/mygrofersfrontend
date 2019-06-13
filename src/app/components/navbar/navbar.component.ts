@@ -1,6 +1,5 @@
 import { Component, Input, OnChanges,ViewEncapsulation} from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
-//import { ViewEncapsulation } from '@angular/compiler/src/core';
 
 
 @Component({
@@ -12,7 +11,6 @@ import { UserService } from 'src/app/services/user.service';
 export class NavbarComponent implements OnChanges {
   @Input() cartValue:number;
   @Input() itemsInCart: any;
-  
     constructor(private userService:UserService) { }
   
   

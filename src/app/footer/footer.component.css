@@ -1,4 +1,8 @@
-.navbar-container
+.nav
 {
 background-color: rgb(252, 126, 147);
+}
+
+.navbar-container{
+    margin-bottom: 0ch;
 }
