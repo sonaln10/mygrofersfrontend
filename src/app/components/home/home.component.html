@@ -1,7 +1,5 @@
-
 <app-navbar [cartValue]="this.count" [itemsInCart]="this.cartItems"></app-navbar>
 <div class="d-flex">
-    <app-product (emitter)='showCounter($event)' (cartItemsEmitter)='showCartItems($event)'></app-product>
+<app-product (emitter)='showCounter($event)' (cartItemsEmitter)='showCartItems($event)'></app-product>
 </div>
-
-    <app-footer></app-footer>
+<app-footer></app-footer>

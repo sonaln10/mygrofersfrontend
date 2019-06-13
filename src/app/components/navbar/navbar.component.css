@@ -13,6 +13,9 @@
   font-weight: bold;
 }
 
+.container{
+    background-color: white;
+}
 .cart{
     left: 400px;
 }
