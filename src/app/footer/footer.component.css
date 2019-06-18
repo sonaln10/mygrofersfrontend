@@ -1,12 +1,15 @@
-.nav
-{
-background-color: rgb(252, 126, 147);
-}
-
-.navbar-container{
-    margin-bottom: 0ch;
-}
-.text-1{
+.nav-item{
+     text-align: justify; 
+     padding-left: 12em; 
     font-family: 'Times New Roman';
-    font-weight: normal;
-}
+    font-size: 14px;
+    color: white;
+}  
+ 
+.navbar {
+    overflow: hidden;
+    background-color: rgb(252, 126, 147);
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+  }
