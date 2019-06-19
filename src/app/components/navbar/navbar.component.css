@@ -7,10 +7,12 @@
     background-color: #28a745;
 }
 
-.mat-tab-link{
+.tab{
   color:black;
   font-family: Arial;
   font-weight: bold;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .container{
@@ -29,5 +31,10 @@
     width:200px; 
     height:150px;
     left: 0px;
+    margin-left: -130px;
+    margin-top: -50px;
 
+  }
+  .fa{
+      margin-top: 20px;
   }

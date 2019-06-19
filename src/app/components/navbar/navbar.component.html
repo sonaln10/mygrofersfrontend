@@ -1,25 +1,27 @@
 <br />
+<nav>
 <div class="container">
- 
     <div class="row">
-        <div class= "col-lg-1">
+        <div class= "col-sm-1">
             <img class="logo" src="assets/images/logo.jpg" alt="logo">
         </div>
-        <div class= "col-lg-8" >
-            <mat-toolbar>
-                <nav mat-tab-nav-bar mat-align-tabs="center">
-                   <p mat-tab-link routerLink="/dashboard">Dashboard</p>
-                   <p mat-tab-link routerLink="/home">Home</p>
-                   <p mat-tab-link routerLink="/manageProducts">Manage Products</p>
-                </nav>
-               </mat-toolbar>
-    </div>
-  
-    <div class="col-md-1">
+        <div class= "col-sm-2" >
+               <p class="tab" routerLink="/dashboard" routerLinkActive="active">Dashboard</p>
+         </div>
+        <div class= "col-md-1" >
+             <p class="tab" routerLink="/home">Home</p>
+        </div>
+        <div class= "col-md-2">
+        <p class="tab" routerLink="/manageProducts">Manage Products</p>
+      </div>
+      <div class= "col-lg-3" >
+          <p class="tab" routerLink="/home">DropDown</p>
+     </div>
+      <div class="col-sm-1">
         <span><i class="fa fa-search" aria-hidden="true"></i></span>  
         </div>
-        <div class="col-lg-1">
-          <a href="#" style="color:rgb(252, 126, 147)"> SIGN IN</a>
+        <div class="col-md-1">
+          <p class="tab" routerLink="/login" style="color:rgb(252, 126, 147)">SIGN IN</p>
         </div>
   <div class="col-sm-1">
   <span><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></span>  
@@ -27,11 +29,11 @@
 
 </div>
 </div>
- <br />
+</nav>
  <nav class="navbar navbar-expand-md bg-dark">
       <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-              <p class="indent">CALL US: 9860901843 </p>
+              <p class="indent">CALL US: 986y9x1843 </p>
             </li>
         <li class="nav-item">
           <p class="indent">FREE SHIPPING AND RETURNS </p>
