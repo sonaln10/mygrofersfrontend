@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges,ViewEncapsulation} from '@angular/core';
+import { Component, Input, OnChanges,ViewEncapsulation, OnInit} from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 
 
@@ -8,9 +8,10 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./navbar.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class NavbarComponent implements OnChanges {
+export class NavbarComponent implements OnChanges,OnInit {
   @Input() cartValue:number;
   @Input() itemsInCart: any;
+  n: string;
     constructor(private userService:UserService) { }
   
   
@@ -20,5 +21,8 @@ export class NavbarComponent implements OnChanges {
   ngOnChanges(){
     this.myOutputMethod();
   }
-  
+  ngOnInit() {
+    
+ this.n=this.userService.getData();
+}
 }

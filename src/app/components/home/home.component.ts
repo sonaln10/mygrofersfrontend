@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component} from '@angular/core';
 
 import { UserService } from 'src/app/services/user.service';
 import { Item } from 'src/app/models/item';
@@ -9,17 +9,11 @@ import { Item } from 'src/app/models/item';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
-n: string;
+export class HomeComponent{
 count:number;
 cartItems:Item[]=[];
 
 constructor(private userService:UserService) {}
-
-  ngOnInit() {
-    console.log("home ngoninit");
- this.n=this.userService.getData();
-}
 
 showCounter(count) {
   this.count=count;
